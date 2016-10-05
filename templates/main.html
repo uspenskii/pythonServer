@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+    <script>
+        $(function () {
+            $('form').on('submit', function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'get',
+                    url: 'api',
+                    data: $('form').serialize()
+                }).done(function (data) {
+                    $("#result").val( $("#result").val() + data)
+                });
+
+        });
+        });
+
+        {#        data: $.ajax({action:'something'),#}
+    </script>
+</head>
+<body>
+
+<form>
+    <input name="action" value="getGoods"><br>
+    <input name="submit" type="submit" value="Submit">
+</form>
+<br>
+<textarea id="result" cols="40" rows="50" style="height: 300px;width: 500px"></textarea>
+
+</body>
+</html>
