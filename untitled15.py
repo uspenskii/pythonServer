@@ -15,8 +15,8 @@ def test():
     if request.args['action'] == "getGoods":
         return Database.getGoods(request.args['type'])
 
-    if request.args['action'] == "search":
-        return Database.search(request.args['request'])
+    if request.args['action'] == "searchRequest":
+        return Database.search(request.args['search'])
 
     return "Error"
 

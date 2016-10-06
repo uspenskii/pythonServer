@@ -19,7 +19,7 @@ def getGoods(typeRec):
 def search(searchRequest):
 
     conn = sqlite3.connect(DATABASE)
-    cursor = conn.execute("SELECT * FROM Goods WHERE name LIKE '%{0}%'".format(searchRequest))
+    cursor = conn.execute("SELECT * FROM Goods WHERE  LOWER(name) LIKE LOWER('%{0}%')".format(searchRequest))
 
     data = cursor.fetchall()
     a = []
