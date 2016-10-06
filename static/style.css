@@ -1,0 +1,13 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#bar{
+    background-color: #92c189;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 20pt;
+    color:white;
+}
