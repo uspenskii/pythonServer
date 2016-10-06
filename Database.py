@@ -28,3 +28,4 @@ def search(searchRequest):
         a.append({'id': data[i][0], 'text': data[i][1], 'image': data[i][2]})
 
     return json.dumps({'count': len(a), 'list': a})
+
